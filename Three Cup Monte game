@@ -1,0 +1,20 @@
+def userinput():
+    guess = ''
+    while guess not in ['0','1','2']:
+        guess=input('Guess which number cup contains a ball out of 0,1 & 2')
+        return int(guess)
+
+def shuff():
+    from random import shuffle
+    result=shuffle(mycups)
+    return result
+
+def check(mycups,guess):
+    if mycups[guess]=='o':
+        print('Correct!')
+    else:
+        print('Wrong guess!')
+
+mycups=['','o','']
+guess=userinput()
+check(mycups,guess)
